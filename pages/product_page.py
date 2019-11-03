@@ -28,8 +28,8 @@ class ProductPage(BasePage):
         book_price = self.browser.find_element(*ProductPageLocators.BOOK_PRICE).text
         product_in_basket_title = self.browser.find_element(*ProductPageLocators.PRODUCT_IN_BASKET_TITLE).text
         basket_price = self.browser.find_element(*ProductPageLocators.BASKET_PRICE).text
-        assert book_title in product_in_basket_title, f"'{book_title}' not in '{product_in_basket_title}'"
-        assert book_price in basket_price, f"'{book_price}' not in '{basket_price}'"
+        assert book_title == product_in_basket_title, f"'{book_title}' not equal '{product_in_basket_title}'"
+        assert book_price == basket_price, f"'{book_price}' not equal '{basket_price}'"
 
 
 
