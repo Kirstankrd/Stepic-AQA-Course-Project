@@ -31,6 +31,14 @@ class ProductPage(BasePage):
         assert book_title == product_in_basket_title, f"'{book_title}' not equal '{product_in_basket_title}'"
         assert book_price == basket_price, f"'{book_price}' not equal '{basket_price}'"
 
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be"
+
+    def should_dissapeared_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should be dissapeared"
+
 
 
 
