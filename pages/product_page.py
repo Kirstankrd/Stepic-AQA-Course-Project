@@ -20,7 +20,7 @@ class ProductPage(BasePage):
             print("No second alert presented")
 
     def add_product_to_basket(self):
-        basket_link = self.browser.find_element(*ProductPageLocators.BASKET_LINK)
+        basket_link = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET_LINK)
         basket_link.click()
 
     def check_status_of_basket(self):
