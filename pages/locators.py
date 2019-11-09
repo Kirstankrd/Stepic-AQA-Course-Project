@@ -8,7 +8,8 @@ class BasePageLocators():
 
 
 class BasketPageLocators():
-
+    LIST_OF_ITEM = (By.CSS_SELECTOR, "#content_inner .col-sm-6.h3")
+    EMPTY_BASKET_MESSAGE = (By.CSS_SELECTOR, "#content_inner p")
 
 
 class LoginPageLocators():
@@ -27,6 +28,3 @@ class ProductPageLocators():
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages div:first-child .alertinner")
     BOOK_PRICE = (By.CSS_SELECTOR, "p.price_color")
     BASKET_PRICE = (By.CSS_SELECTOR, "#messages div:nth-child(3) div p:first-child strong")
-
-
-
