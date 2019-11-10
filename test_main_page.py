@@ -6,7 +6,6 @@ import pytest
 
 @pytest.mark.login_guest
 class TestLoginFromMainPage():
-    @pytest.mark.xfail(reason="just learn negative tests")
     def test_guest_can_go_to_login_page(self, browser):
         link = "http://selenium1py.pythonanywhere.com/"
         page = MainPage(browser, link)
